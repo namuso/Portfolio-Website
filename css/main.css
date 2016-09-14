@@ -1,0 +1,120 @@
+/* CSS */
+body {margin: 0;}
+
+a {
+  color: black;
+}
+
+.myhead {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+}
+
+.not--fixed {
+  margin: 0;
+  position: static;
+  z-index: 10;
+}
+
+.is--fixed {
+  -webkit-transform: translateZ(0);
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 1.5;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    margin-bottom: -50px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    opacity: 0.99;
+    height: 50px;
+    width: 100%;
+    box-shadow: 0 2px 3px rgba(0, 0, 20, 0.5);
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: #CDCDDE;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 20px;
+}
+
+ul.topnav li a:hover:not(.active) {color: #0F2F6F;}
+
+ul.topnav li a.active {color: #0F2F6F;}
+
+ul.topnav li.right {float: right;}
+
+/* Parallax Images */
+.hsContainer {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    opacity: 1;
+}
+.hsContent {
+    position: relative;  
+    max-width: 450px;
+    margin: -150px auto 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+    color: #ebebeb;
+    padding: 0 8%;
+    text-align: center;
+    z-index: 999;
+}
+.bcg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+
+h2 {
+    margin: 0;
+}
+
+h4 {
+    color: #CFCFD8;
+    font-style: italic;
+    font-family: "Arial Black";
+    font-size: 28px;
+    text-shadow: 0 1px 3px rgba(0, 0, 20, 0.6);
+}
+
+.hsContent h2,
+    .copy h2 {
+        color: #ffffff;
+        font-family: "Arial Black";
+        font-size: 48px;
+        line-height: 48px;
+        margin-bottom: 12px;
+        text-shadow: 0 2px 5px rgba(0, 0, 20, 0.6);
+    }
+
+/* Slide 1 */
+#slide-1 .bcg {background-image:url('../img/bg0.jpg')}
+
+/* Media / Screen Size */
+@media screen and (max-width: 400px){
+    ul.topnav li.right,
+    ul.topnav li {float: none;}
+}
