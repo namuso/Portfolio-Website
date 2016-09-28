@@ -1,6 +1,6 @@
 $(window).scroll(function() {
   var $header = $("header");
-  var window_offset = 100 - $(window).scrollTop();
+  var window_offset = 75 - $(window).scrollTop();
   var my_id = 'mynavbar';
 
   if (window_offset < 0 && document.getElementById(my_id).className.match(/(?:^|\s)not--fixed(?!\S)/)){
