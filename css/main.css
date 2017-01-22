@@ -1,201 +1,486 @@
-/* CSS */
+/* ******************************************************
+ * CSS - Main 
+ * ****************************************************** */
+
 body {
-  margin: 0;
-  background-color: white;
-}
-
-a {
-  color: black;
-}
-
-.myhead {
-  width: 100%;
-  height: 75px;
-  background-color: white;
-}
-
-.not--fixed {
-  margin: 0;
-  position: static;
-  z-index: 10000;
-}
-
-.is--fixed {
-  -webkit-transform: translateZ(0);
-  margin: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  line-height: 1.5;
-  z-index: 10000;
-}
-
-
-ul.topnav {
-    list-style-type: none;
+    top: 0;
+    left: 0;
     margin: 0;
-    margin-bottom: -50px;
-    /*margin-left: auto;
-    margin-right: auto;*/
-    padding: 10;
-    overflow: hidden;
-    background-color: #FFFFFF;
-    opacity: 0.99;
-    height: 50px;
+    padding: 0;
     width: 100%;
-    box-shadow: 0 2px 3px rgba(0, 0, 20, 0.5);
-    z-index: 10000;
+    background-color: white;
 }
 
-ul.topnav li {display: inline-block;
-}/*float: left;}*/
-
-ul.topnav li a {
-    display: inline-block;
-
-    /*display: block;*/
-    color: #CDCDDE;
-    text-align: center;
-    padding: 14px 16px;
+/* For all Text */
+a, p, h1, h2, h3, h4, h5, h6, input, textarea, button {
     text-decoration: none;
-    font-family: "Trebuchet MS";
-    font-size: 20px;
-    z-index: 10000;
+    margin: 0;
+    padding: 0;
 }
 
-ul.topnav li a:hover:not(.active) {color: #0F2F6F;}
-
-ul.topnav li a.active {color: #0F2F6F;}
-
-ul.topnav li.right {float: right;}
-
-.fake-nav {
-  color: white;
-  background-color: black;
-  height: 50px;
-  width: 100%;
-  top: 200px;
-  position: fixed;
-  margin: 0;
-  left: 0;
+/* Set body text font */
+a, p, h2, h3, h5, input, textarea, button {
+    font-family: 'Proza Libre', sans-serif;
+    text-align: left;
 }
 
-/* Parallax Images */
-.hsContainer {
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    opacity: 1;
-}
-.hsContent {
-    position: relative;  
-    max-width: 450px;
-    margin: -150px auto 0 auto;
-    display: table-cell;
-    vertical-align: middle;
-    color: #ebebeb;
-    padding: 0 8%;
+/* Set header text font */
+h1, h4, h6 {
+    font-family: 'Days One', sans-serif;
     text-align: center;
-    z-index: 999;
 }
-.bcg {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 600px;
-    width: 100%;
-}
+
+/* Set Individuals */
+a {font-size: 20px; color: #555A66;}
+a .svg-logo-stroke {stroke: #222A33;}
+a .svg-logo-fill {fill: #222A33;}
+a:hover {color: #BBBFCC;}
+a:hover .svg-logo-stroke {stroke: #BBBFCC;}
+a:hover .svg-logo-fill {fill: #BBBFCC;}
 
 p {
-    font-family: "Trebuchet MS";
-    font-size: 16px;
-    color: #001122
+  font-size: 16px;
+  padding-top:8px;
+  color: #555A66;
 }
-
-h2 {
-    font-family: "Trebuchet MS";
-    font-style: bold;
-    font-size: 36px;
-    color: #5533CC;
-    text-shadow: 0 1px 2px rgba(0, 0, 20, 0.6);
-}
-
-h3 {
-    margin-top: -5px;
-    margin-bottom: 20px;
-    font-family: "Trebuchet MS";
-    font-style: italic;
-    font-size: 20px;
-    color: #22446F
-}
-
-h4 {
-    color: #CFCFD8;
-    font-style: italic;
-    font-family: "Arial Black";
-    font-size: 28px;
+h1 {
+    font-size: 72px;
     text-shadow: 0 1px 3px rgba(0, 0, 20, 0.6);
+    color: white;
+}
+h2 {
+    font-size: 24px;
+    color: #2778AD;
+}
+h3 {
+    font-size: 18px;
+    font-style: italic;
+    color: #44C2B1;
+}
+h4 {
+    font-size: 42px;
+    font-style: italic;
+    text-shadow: 0 1px 3px rgba(0, 0, 40, 0.6);
+    color: #CCDDEE;
+}
+h5 {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: white;
+}
+h6 {
+    font-size: 24px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: white;
 }
 
-.hsContent h2,
-    .copy h2 {
-        color: #ffffff;
-        font-family: "Arial Black";
-        font-size: 48px;
-        line-height: 48px;
-        margin-bottom: 12px;
-        text-shadow: 0 2px 5px rgba(0, 0, 20, 0.6);
-    }
+/* Simple line break */
+.break {
+  background-color: #CCCFDC;
+  height: 1px;
+  width: 90%;
+  margin: auto;
+}
 
-/* Slide 1 */
-#slide-1 .bcg {background-image:url('../img/bg4.jpg')}
+/* Button formatting */
+button, input[type="submit"], input[type="button"] {
+    display: block;
+    width: 200px;
+    height: 40px;
+    font-size: 18px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
 
-.expContainer {
-  padding: 40px;
-  background-color: white;
+/* Format description container */
+.description-container {
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #2778AD; 
+}
+.description-container button[type="submit"], .about-container button {
+    margin: auto;
+    margin-top: 20px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+.description-container button:hover {background-color: white; color: #2778AD;}
+.about-container button:hover {background-color: white; color: #222A33;}
+
+.button-container {display: flex; align-items: center; justify-content: center; margin: auto; margin-top: 8vw;}
+.button-container button[type="submit"] {display: inline-block; margin: 0; margin-right: 20px; margin-left: 20px;}
+
+.headerFont {
+    font-size: 24px;
+    font-family: 'Days One', sans-serif;
+}
+
+/* ******************************************************
+ * CSS - Navbar 
+ * ****************************************************** */
+
+/* Place holder for fixed navbar */
+.header {
+    width: 100%;
+    height: 75px;
+    background-color: white;
+    margin: 0;
+}
+.header.is--fixed {margin-bottom: 60px;}
+
+/* Actual nav */
+.topnav {
+    margin: 0;
+    top: 0;
+    left: 0;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    overflow: hidden;
+    z-index: 10000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.topnav ul {list-style-type: none; padding: 0; margin: 0; width: 100%; max-width: 800px;}
+.topnav.not--fixed {position: static;}
+.topnav.is--fixed {
+  -webkit-transform: translateZ(0);
+  position: fixed;
+  box-shadow: 0 2px 3px rgba(0, 0, 20, 0.5);
+}
+
+/* Each item in nav */
+.navbar-text, .navbar-logo, .navbar-center-logo {
+    display: inline-block;
+    width: 20%;
+    margin: 0;
+    padding: 0; 
+    vertical-align: middle;
+    text-align: center;
+}
+.navbar-logo {display: none;}
+
+/* Highlight active section */
+.current-section {font-size: 25px;}
+.current-section .svg-logo-fill {fill: #BBBFCC;}
+.current-section .svg-logo-stroke {stroke: #BBBFCC;}
+
+/* ******************************************************
+ * CSS - About 
+ * ****************************************************** */
+
+/* Handle bg-image */
+.about-container { 
+
+    /* Set a specific height */
+    height: 50vw; 
+
+    /* Create the parallax scrolling effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container for header text */
+.about-text {display: block;}
+.about-text > h4 {overflow: hidden;}
+#portrait .about-text > h4:before, #portrait .about-text > h4:after {
+    background-color: #CCDDEE;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 4em;
+    bottom: 0px;
+}
+#portrait .about-text > h4:before {right: 0.5em; margin-left: -50%;}
+#portrait .about-text > h4:after {left: 0.5em; margin-right: -50%;}
+
+#about-link, #skills-link {font-style: italic;}
+#about-full, #skills-full {text-align: left; margin-left: 10%; margin-right: 10%;}
+#about-link:hover, #skills-link:hover {cursor: pointer; text-decoration: underline;}
+#about-full.is--hidden, #skills-full.is--hidden {display: none;}
+
+
+/* ******************************************************
+ * CSS - Experience 
+ * ****************************************************** */
+
+/* Container for experiences */
+.exp-container {
+  width: 80%;
+  padding-left: 10%;
+  padding-right: 10%;
   z-index: 1;
+  margin: auto;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
-.expItem {
-  padding: 10px;
-  background-color: white;
-  margin: 5px;
-  margin-top: 20px;
-  height: 240px;
+/* Experience item */
+.exp-item {
+  top: 0;
+  left: 0;
+  margin: 0;
+  margin-top: 60px;
+  margin-bottom: 60px;
   width: 100%;
+  overflow: hidden;
 }
 
-.expImage {
-  background-color: red;
-  border: 2px solid black;
-  border-radius: 40px;
-  width: 220px;
-  height: 220px;
+/* Image container in experience item */
+.exp-image {
+  background-color: darkgrey;
+  border-radius: 3vw;
+  width: 25%;
+  height: 17vw;
   float: left;
   overflow: hidden;
   position: relative;
 }
 
-.expImage img {
+/* Image in image container */
+.exp-image img {
   position: absolute;
-  /*left: -20px;
-  top: 0px;*/
   height: 100%;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%); 
 }
 
-.expText {
+/* Text container in experience item */
+.exp-text {
   float: left;
-  padding: 5px;
-  padding-left: 40px;
+  padding: 0px;
+  padding-left: 5%;
+  width: 70%;
 }
 
-/* Media / Screen Size */
-@media screen and (max-width: 400px){
-    ul.topnav li.right,
-    ul.topnav li {float: none;}
+
+/* ******************************************************
+ * CSS - Portfolio 
+ * ****************************************************** */
+
+/* Set container properties */
+.portfolio-container {
+    width: 100%;
+    height: 480px;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 36px;
+    color: #FFF;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+#portfolio .swiper-slide {background-color: #D0D8DF;}
+#project-img .swiper-slide {background-color: #222A33;}
+
+/* Set slide container properties */
+.slide-container {
+    width: 80%;
+    height: 360px;
+    margin: auto;
+}
+.slide-container h6 {margin-bottom: 5px; color: #222A33;}
+.slide-container h5 {margin-top: 5px; color: #555A66;}
+.slide-container button {
+    margin: auto;
+    background-color: #222A33;
+    color: #D0D8DF;
+    border: 2px solid #222A33;
+}
+.slide-container button:hover {background-color: #333B44; color: white;}
+
+/* Portfolio content container */
+.text-container {
+    width: 100%;
+    height: 320px;
+}
+
+/* Image inside of portfolio content container */
+.portfolio-logo {
+    width: 160px;
+    height: 160px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+
+/* ******************************************************
+ * CSS - Contact 
+ * ****************************************************** */
+
+/* Container for links */
+.contact-container {
+    width: 100%;
+    padding-top: 75px;
+    padding-bottom: 25px;
+    background-color: #07588D;
+    color: white;
+    text-align: center;
+}
+.contact-container a {
+    color: white;
+    font-size: 28px;
+    margin: 20px;
+    text-align: center;
+}
+
+/* Contact form styles */
+.contact-form {
+    padding-left: 8vw;
+    padding-right: 8vw;
+}
+.contact-form > input[type="text"],textarea {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: block;
+    width: 98%;
+    height: 32px;
+    vertical-align: middle;
+    padding: 2px 1%;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #345;
+    background-color: #FFF;
+    border: 1px solid #BCD;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.contact-form > textarea {
+    height: 64px;
+    resize: none;
+    padding-top: 5px;
+}
+.contact-form > .form-error, .contact-form > input[type="text"].form-error {border: 1px solid red; background-color: #FFCCDD;}
+.contact-form > .form-disabled, .contact-form > input[type="text"].form-disabled {background-color: #DDDDDF;}
+.contact-form > input[type="submit"] {
+    color: white;
+    background-color: #44C2B1;
+    border: 2px solid #44C2B1;
+    border-radius: 20px;
+    margin-right: 0px;
+    margin-left: auto;
+}
+.contact-form > input[type="submit"]:hover {background-color: #55D3C2;}
+
+.contact-form a {
+    display: block;
+    width: 100%;
+    color: #FFF;
+    margin: auto;
+    text-align: center;
+}
+.contact-form input[type="button"] {
+    margin: auto;
+    color: white;
+    background-color: #44C2B1;
+    border: 2px solid #44C2B1;
+    border-radius: 20px;
+    margin-top: 15px;
+}
+.contact-form input[type="button"]:hover {background-color: #55D3C2;}
+
+.contact-form > h5 {
+    color: red;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: -12px;
+    text-align: left;
+    line-height: 1px;
+    font-size: 14px;
+}
+
+/* ******************************************************
+ * CSS - Project 
+ * ****************************************************** */
+
+.about-container button {
+    margin-top: 8vw;
+}
+
+.project-container {
+    width: 80%;
+    margin: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #FFF;
+}
+
+/* ******************************************************
+ * CSS - Responsive 
+ * ****************************************************** */
+
+@media screen and (max-width: 800px){
+    h1 {font-size: 56px;}
+    h4 {font-size: 36px;}
+}
+
+@media screen and (max-width: 650px){
+    h1 {font-size: 48px;}
+    h4 {font-size: 28px;}
+    a {font-size: 16px;}
+    .current-section {font-size: 20px;}
+
+    .exp-text {width:100%; float: none; padding:0;}
+    .exp-text > h2 {text-align: center;}
+    .exp-text > h3 {text-align: center;}
+    .exp-image {width:100%; height:68vw; float: none; border-radius:12vw; margin-bottom:20px;}
+}
+
+@media screen and (max-width: 500px){
+    h1 {font-size: 36px;}
+    h4 {font-size: 20px;}
+
+    .exp-text > h2 {font-size: 20px;}
+    .exp-text > h3 {font-size: 14px;}
+
+    .navbar-text {display: none;}
+    .navbar-logo {display: inline-block;}
+    .current-section {font-size: 16px;}
+
+    .contact-form > input[type="submit"] {width: 100%; border-radius: 5px;}
+
+    .button-container button[type="submit"] {width: 160px; font-size: 16px;}
 }
